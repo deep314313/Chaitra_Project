@@ -39,7 +39,7 @@ const Donate = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/donations', formData, {
+      await axios.post('https://chaitra-foundation.onrender.com/api/donations', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       navigate('/profile');
