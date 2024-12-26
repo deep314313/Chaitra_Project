@@ -12,7 +12,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/profile', {
+        const response = await axios.get('https://chaitra-foundation.onrender.com/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setProfile(response.data);
@@ -27,7 +27,7 @@ const Profile = () => {
 
     const fetchDonations = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/donations/my-donations', {
+        const response = await axios.get('https://chaitra-foundation.onrender.com/api/donations/my-donations', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setDonations(response.data);
